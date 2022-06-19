@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Academy - Education Course Template</title>
+
+    <link rel="icon" href="img/core-img/xfavicon.ico.pagespeed.ic.wzCKlKvUH8.webp">
+
+    <link rel="stylesheet" href="A.style.css.pagespeed.cf.eXw7Qh_fPx.css">
+    <script nonce="9a79b3ac-fbb8-4a79-85c4-690959dbddb4">
+        (function(w, d) {
+            ! function(a, e, t, r) {
+                a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = {
+                    deferred: []
+                }, a.zaraz.q = [], a.zaraz._f = function(e) {
+                    return function() {
+                        var t = Array.prototype.slice.call(arguments);
+                        a.zaraz.q.push({
+                            m: e,
+                            a: t
+                        })
+                    }
+                };
+                for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e);
+                a.zaraz.init = () => {
+                    var t = e.getElementsByTagName(r)[0],
+                        z = e.createElement(r),
+                        n = e.getElementsByTagName("title")[0];
+                    for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) {
+                        const e = a.zaraz.q.shift();
+                        a.zarazData.q.push(e)
+                    }
+                    z.defer = !0;
+                    for (const e of [localStorage, sessionStorage]) Object.keys(e || {}).filter((a => a.startsWith("_zaraz_"))).forEach((t => {
+                        try {
+                            a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t))
+                        } catch {
+                            a.zarazData["z_" + t.slice(7)] = e.getItem(t)
+                        }
+                    }));
+                    z.referrerPolicy = "origin", z.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t)
+                }, ["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init)
+            }(w, d, 0, "script");
+        })(window, document);
+    </script>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+    <header class="header-area">
+
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
+                            <div class="academy-logo">
+                                <a href="index.html"><img src="data:image/webp;base64,UklGRioDAABXRUJQVlA4TB4DAAAvmIAGELfBIJKkRr1IQAM6wL+p9NGCoraNJBfCHM9Z/jAXQRup6SOBoAD8W9xQQ7aVc59BfEnkEkVkfT6DdxLUbWFRQf9Mb6OwUE8EGe9OIEGEJBQhQat5/fZDiHmiMbhwEf+zALJs227b5rFK4GODe0vc4+7YcJn/2IR3L6AUfkf034HbtpHkTHauPRQ37ewbhMTvV1moeA1hobaXEEJ4kQWK52DiWRYnngLE0wLlQm2PgcajLEg8hEQ8yGLEfUjGPaeaq020HESbDUmjEyFxEW0AiL7CcAooTUWjB445Qd37CKO01EF+hYy4o/WrKWNEDL8mpa1nQKkjxSpDVVUP28gB5ww0PXPJmTLuQthyq6sEPi+uthfVUswZMt5ni3A6pFlheZMdgbePnPx4M8nr8xajNUaomnetRWi9HQXdgKkd0gHAVgoxIagje6sRXVrBuL9/ZOS7SeJAvKhsUFaA0FqTBiCrPZMhMBU2IOhz4iDuOhQxgvyK3H6m8vOWsBu6Rm1h0E8NIKnpAVtHX0NRRMS+fgs5mBcg+30j+6Wd8uYzkTfljmHHzlOPvTBVidJID9Q+Gt4mhP65XDV2OIzXaOY67gbc75ZFcf1J87ooyl1SraGz01NgxiZkmJwFHBMiTZF4i4IinjP7Rq1In8P+rNjE1SfJq8hxBhVpqt00R7623wcDT0TManJl3ufNe0FkZcDSfkQHLj8hL3lKTedzl/mi5rsByf/JF8PX1bH9UGTXAfYpbCRPRZJLjvkdn3WZLEGdQcq9zL9oBBGbVJjE0NceizqJLlx8hfB1EQlORIjTPPrUx8yqPibIGi5AGDLeAtIKqgeRhuwY4XH04fz7+zz+wLHFyai2ahPr51C7DMuqgWuy9mULfkuFKwPxKH7fT5NHjMZVqRjpE6e1i0CSbEXbzuU+cQaQNaL2uUptyfSVIU20afIZ3fGF3szIP/CMdiC7c7K15NDmIUEhTtLp4BP/apw3XaDcvy7nX80WkkF1/gOSg5gHFMQ3fAKwb5802tAqDH5F5u7aGMjUmSq3EMQfkOwXxb4sVOwtTAo=" alt=""></a>
+                            </div>
+                            <div class="login-content">
+                                <a href="#">Register / Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="academy-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+
+                    <nav class="classy-navbar justify-content-between" id="academyNav">
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="course.html">Course</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Mega Menu</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">Services &amp; Features</a></li>
+                                                <li><a href="#">Accordions and tabs</a></li>
+                                                <li><a href="#">Menu ideas</a></li>
+                                                <li><a href="#">Students Gallery</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">Services &amp; Features</a></li>
+                                                <li><a href="#">Accordions and tabs</a></li>
+                                                <li><a href="#">Menu ideas</a></li>
+                                                <li><a href="#">Students Gallery</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">Services &amp; Features</a></li>
+                                                <li><a href="#">Accordions and tabs</a></li>
+                                                <li><a href="#">Menu ideas</a></li>
+                                                <li><a href="#">Students Gallery</a></li>
+                                            </ul>
+                                            <div class="single-mega cn-col-4">
+                                                <img src="img/bg-img/xbg-1.jpg.pagespeed.ic.nK3W95qg0q.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="course.html">Course</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="calling-info">
+                            <div class="call-center">
+                                <a href="tel:+654563325568889"><i class="icon-telephone-2"></i> <span>(+65) 456 332 5568 889</span></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="breadcumb-area bg-img" style="background-image:url(img/bg-img/xbreadcumb.jpg.pagespeed.ic.kUudvbe3d4.webp)">
+        <div class="bradcumbContent">
+            <h2>About Us</h2>
+        </div>
+    </div>
+
+
+    <section class="about-us-area mt-50 section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                        <span>The Best</span>
+                        <h3>We are the Academy</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis.
+                        Ut in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                </div>
+                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+                    <p>Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut
+                        in iaculis enim, et pulvinar mauris. Etiam tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="about-slides owl-carousel mt-100 wow fadeInUp" data-wow-delay="600ms">
+                        <img src="img/bg-img/xbg-3.jpg.pagespeed.ic.JzvPptSrSB.webp" alt="">
+                        <img src="img/bg-img/xbg-2.jpg.pagespeed.ic.EyEzBERfTL.webp" alt="">
+                        <img src="img/bg-img/xbg-1.jpg.pagespeed.ic.nK3W95qg0q.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="teachers-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                        <span>The Best</span>
+                        <h3>Meet the Teachers</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="400ms">
+
+                        <div class="teachers-thumbnail">
+                            <img src="img/bg-img/xtea1.jpg.pagespeed.ic.ZyijO4Pw93.webp" alt="">
+                        </div>
+
+                        <div class="teachers-info mt-30">
+                            <h5>Maria D. Smith</h5>
+                            <span>Marketing Proffesor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+
+                        <div class="teachers-thumbnail">
+                            <img src="img/bg-img/xtea2.jpg.pagespeed.ic.vHg9fWcOwL.webp" alt="">
+                        </div>
+
+                        <div class="teachers-info mt-30">
+                            <h5>Simon Duval</h5>
+                            <span>Digital Proffesor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="600ms">
+
+                        <div class="teachers-thumbnail">
+                            <img src="img/bg-img/xtea3.jpg.pagespeed.ic.-y5z7WGLV7.webp" alt="">
+                        </div>
+
+                        <div class="teachers-info mt-30">
+                            <h5>James Hogan</h5>
+                            <span>HTML Proffesor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="700ms">
+
+                        <div class="teachers-thumbnail">
+                            <img src="img/bg-img/xtea4.jpg.pagespeed.ic.5SWAD3V-Ql.webp" alt="">
+                        </div>
+
+                        <div class="teachers-info mt-30">
+                            <h5>Claudia Williams</h5>
+                            <span>Marketing Proffesor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="view-all text-center wow fadeInUp" data-wow-delay="800ms">
+                        <a href="#" class="btn academy-btn">All Teachers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-area">
+        <div class="main-footer-area section-padding-100-0">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <a href="#"><img src="img/core-img/xlogo2.png.pagespeed.ic.DSNcneujdE.webp" alt=""></a>
+                            </div>
+                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Usefull Links</h6>
+                            </div>
+                            <nav>
+                                <ul class="useful-links">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Services &amp; Features</a></li>
+                                    <li><a href="#">Accordions and tabs</a></li>
+                                    <li><a href="#">Menu ideas</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Gallery</h6>
+                            </div>
+                            <div class="gallery-list d-flex justify-content-between flex-wrap">
+                                <a href="img/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src="img/bg-img/xgallery1.jpg.pagespeed.ic.9wZPoCXURF.webp" alt=""></a>
+                                <a href="img/bg-img/gallery2.jpg" class="gallery-img" title="Gallery Image 2"><img src="img/bg-img/xgallery2.jpg.pagespeed.ic.KRzkuZ3jnD.webp" alt=""></a>
+                                <a href="img/bg-img/gallery3.jpg" class="gallery-img" title="Gallery Image 3"><img src="img/bg-img/xgallery3.jpg.pagespeed.ic.AlK9sZWZIr.webp" alt=""></a>
+                                <a href="img/bg-img/gallery4.jpg" class="gallery-img" title="Gallery Image 4"><img src="img/bg-img/xgallery4.jpg.pagespeed.ic.gk3JbDWcgm.webp" alt=""></a>
+                                <a href="img/bg-img/gallery5.jpg" class="gallery-img" title="Gallery Image 5"><img src="img/bg-img/xgallery5.jpg.pagespeed.ic.iseNHDC5_k.webp" alt=""></a>
+                                <a href="img/bg-img/gallery6.jpg" class="gallery-img" title="Gallery Image 6"><img src="img/bg-img/xgallery6.jpg.pagespeed.ic.R9LFhuMDI3.webp" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Contact</h6>
+                            </div>
+                            <div class="single-contact d-flex mb-30">
+                                <i class="icon-placeholder"></i>
+                                <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
+                            </div>
+                            <div class="single-contact d-flex mb-30">
+                                <i class="icon-telephone-1"></i>
+                                <p>Main: 203-808-8613 <br>Office: 203-808-8648</p>
+                            </div>
+                            <div class="single-contact d-flex">
+                                <i class="icon-contract"></i>
+                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b747d7d72787e5b62746e69796e6872757e686835787476">[email&#160;protected]</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            Copyright &copy;
+                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+
+    <script src="js/bootstrap/popper.min.js+bootstrap.min.js.pagespeed.jc.IMOwH2Gujn.js"></script>
+    <script>
+        eval(mod_pagespeed_gP$kT8Ob2F);
+    </script>
+
+    <script>
+        eval(mod_pagespeed_nUTqm4G8_4);
+    </script>
+
+    <script src="js/plugins/plugins.js"></script>
+
+    <script src="js/active.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []; 
+        function gtag() {
+            dataLayer.push(arguments);
+        } 
+        gtag('js', new Date());
+
+         
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"71dbf3609f1621be","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.6.0","si":100}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
