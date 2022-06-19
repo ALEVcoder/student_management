@@ -1,578 +1,301 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% block content %}
 
 
-    <title>Academy - Education Course Template</title>
 
-    <link rel="icon" href="{% static 'img/core-img/xfavicon.ico.pagespeed.ic.wzCKlKvUH8.webp' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<section class="hero-area">
+    <div class="hero-slides owl-carousel">
 
-    <link rel="stylesheet" href="{% static 'A.style.css.pagespeed.cf.eXw7Qh_fPx.css' %}">
-    <script nonce="4c41617a-05a5-4ed3-afbe-b797c2c369b9">
-        (function(w, d) {
-            ! function(a, e, t, r) {
-                a.zarazData = a.zarazData || {}, a.zarazData.executed = [], a.zaraz = {
-                    deferred: []
-                }, a.zaraz.q = [], a.zaraz._f = function(e) {
-                    return function() {
-                        var t = Array.prototype.slice.call(arguments);
-                        a.zaraz.q.push({
-                            m: e,
-                            a: t
-                        })
-                    }
-                };
-                for (const e of ["track", "set", "ecommerce", "debug"]) a.zaraz[e] = a.zaraz._f(e);
-                a.zaraz.init = () => {
-                    var t = e.getElementsByTagName(r)[0],
-                        z = e.createElement(r),
-                        n = e.getElementsByTagName("title")[0];
-                    for (n && (a.zarazData.t = e.getElementsByTagName("title")[0].text), a.zarazData.x = Math.random(), a.zarazData.w = a.screen.width, a.zarazData.h = a.screen.height, a.zarazData.j = a.innerHeight, a.zarazData.e = a.innerWidth, a.zarazData.l = a.location.href, a.zarazData.r = e.referrer, a.zarazData.k = a.screen.colorDepth, a.zarazData.n = e.characterSet, a.zarazData.o = (new Date).getTimezoneOffset(), a.zarazData.q = []; a.zaraz.q.length;) {
-                        const e = a.zaraz.q.shift();
-                        a.zarazData.q.push(e)
-                    }
-                    z.defer = !0;
-                    for (const e of [localStorage, sessionStorage]) Object.keys(e || {}).filter((a => a.startsWith("_zaraz_"))).forEach((t => {
-                        try {
-                            a.zarazData["z_" + t.slice(7)] = JSON.parse(e.getItem(t))
-                        } catch {
-                            a.zarazData["z_" + t.slice(7)] = e.getItem(t)
-                        }
-                    }));
-                    z.referrerPolicy = "origin", z.src = "/cdn-cgi/zaraz/s.js' %}?z=" + btoa(encodeURIComponent(JSON.stringify(a.zarazData))), t.parentNode.insertBefore(z, t)
-                }, ["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init)
-            }(w, d, 0, "script");
-        })(window, document);
-    </script>
-    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}">
-</head>
-
-<body>
-
-    <div id="preloader">
-        <i class="circle-preloader"></i>
-    </div>
-
-    <header class="header-area">
-
-        <div class="top-header">
+        <div class="single-hero-slide bg-img" style="background-image:url({% static 'img/bg-img/xbg-1.jpg.pagespeed.ic.nK3W95qg0q.webp' %})">
             <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 h-100">
-                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
-                            <div class="academy-logo">
-                                <a href="index.html"><img src="{% static 'data:image/webp;base64,UklGRioDAABXRUJQVlA4TB4DAAAvmIAGELfBIJKkRr1IQAM6wL+p9NGCoraNJBfCHM9Z/jAXQRup6SOBoAD8W9xQQ7aVc59BfEnkEkVkfT6DdxLUbWFRQf9Mb6OwUE8EGe9OIEGEJBQhQat5/fZDiHmiMbhwEf+zALJs227b5rFK4GODe0vc4+7YcJn/2IR3L6AUfkf034HbtpHkTHauPRQ37ewbhMTvV1moeA1hobaXEEJ4kQWK52DiWRYnngLE0wLlQm2PgcajLEg8hEQ8yGLEfUjGPaeaq020HESbDUmjEyFxEW0AiL7CcAooTUWjB445Qd37CKO01EF+hYy4o/WrKWNEDL8mpa1nQKkjxSpDVVUP28gB5ww0PXPJmTLuQthyq6sEPi+uthfVUswZMt5ni3A6pFlheZMdgbePnPx4M8nr8xajNUaomnetRWi9HQXdgKkd0gHAVgoxIagje6sRXVrBuL9/ZOS7SeJAvKhsUFaA0FqTBiCrPZMhMBU2IOhz4iDuOhQxgvyK3H6m8vOWsBu6Rm1h0E8NIKnpAVtHX0NRRMS+fgs5mBcg+30j+6Wd8uYzkTfljmHHzlOPvTBVidJID9Q+Gt4mhP65XDV2OIzXaOY67gbc75ZFcf1J87ooyl1SraGz01NgxiZkmJwFHBMiTZF4i4IinjP7Rq1In8P+rNjE1SfJq8hxBhVpqt00R7623wcDT0TManJl3ufNe0FkZcDSfkQHLj8hL3lKTedzl/mi5rsByf/JF8PX1bH9UGTXAfYpbCRPRZJLjvkdn3WZLEGdQcq9zL9oBBGbVJjE0NceizqJLlx8hfB1EQlORIjTPPrUx8yqPibIGi5AGDLeAtIKqgeRhuwY4XH04fz7+zz+wLHFyai2ahPr51C7DMuqgWuy9mULfkuFKwPxKH7fT5NHjMZVqRjpE6e1i0CSbEXbzuU+cQaQNaL2uUptyfSVIU20afIZ3fGF3szIP/CMdiC7c7K15NDmIUEhTtLp4BP/apw3XaDcvy7nX80WkkF1/gOSg5gHFMQ3fAKwb5802tAqDH5F5u7aGMjUmSq3EMQfkOwXxb4sVOwtTAo=" alt=""></a>
-                            </div>
-                            <div class="login-content">
-                                <a href="http://127.0.0.1:9000/admin_home/">Register / Login</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="academy-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-
-                    <nav class="classy-navbar justify-content-between" id="academyNav">
-
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <div class="classy-menu">
-
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <div class="classynav">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="course.html">Course</a></li>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="elements.html">Elements</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Mega Menu</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="#">Home</a></li>
-                                                <li><a href="#">Services &amp; Features</a></li>
-                                                <li><a href="#">Accordions and tabs</a></li>
-                                                <li><a href="#">Menu ideas</a></li>
-                                                <li><a href="#">Students Gallery</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="#">Home</a></li>
-                                                <li><a href="#">Services &amp; Features</a></li>
-                                                <li><a href="#">Accordions and tabs</a></li>
-                                                <li><a href="#">Menu ideas</a></li>
-                                                <li><a href="#">Students Gallery</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="#">Home</a></li>
-                                                <li><a href="#">Services &amp; Features</a></li>
-                                                <li><a href="#">Accordions and tabs</a></li>
-                                                <li><a href="#">Menu ideas</a></li>
-                                                <li><a href="#">Students Gallery</a></li>
-                                            </ul>
-                                            <div class="single-mega cn-col-4">
-                                                <img src="{% static 'img/bg-img/xbg-1.jpg.pagespeed.ic.nK3W95qg0q.webp' %}" alt="">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="course.html">Course</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                        <div class="calling-info">
-                            <div class="call-center">
-                                <a href="tel:+654563325568889"><i class="fa-solid fa-phone"></i> <span>(+65) 456 332 5568 889</span></a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-    <section class="hero-area">
-        <div class="hero-slides owl-carousel">
-
-            <div class="single-hero-slide bg-img" style="background-image:url({% static 'img/bg-img/xbg-1.jpg.pagespeed.ic.nK3W95qg0q.webp' %})">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12">
-                            <div class="hero-slides-content">
-                                <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University</h2>
-                                <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="single-hero-slide bg-img" style="background-image:url({% static 'img/bg-img/xbg-2.jpg.pagespeed.ic.EyEzBERfTL.webp' %})">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-12">
-                            <div class="hero-slides-content">
-                                <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University</h2>
-                                <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="top-features-area wow fadeInUp" data-wow-delay="300ms">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="features-content">
-                        <div class="row no-gutters">
-
-                            <div class="col-12 col-md-4">
-                                <div class="single-top-features d-flex align-items-center justify-content-center">
-                                    <i class="icon-agenda-1"></i>
-                                    <h5>Online Courses</h5>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-4">
-                                <div class="single-top-features d-flex align-items-center justify-content-center">
-                                    <i class="icon-assistance"></i>
-                                    <h5>Amazing Teachers</h5>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-4">
-                                <div class="single-top-features d-flex align-items-center justify-content-center">
-                                    <i class="icon-telephone-3"></i>
-                                    <h5>Great Support</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="academy-courses-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="course-icon">
-                            <i class="icon-id-card"></i>
-                        </div>
-                        <div class="course-content">
-                            <h4>Business School</h4>
-                            <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="course-icon">
-                            <i class="icon-worldwide"></i>
-                        </div>
-                        <div class="course-content">
-                            <h4>Marketing</h4>
-                            <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <div class="course-icon">
-                            <i class="icon-map"></i>
-                        </div>
-                        <div class="course-content">
-                            <h4>Photography</h4>
-                            <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="600ms">
-                        <div class="course-icon">
-                            <i class="icon-like"></i>
-                        </div>
-                        <div class="course-content">
-                            <h4>Social Media</h4>
-                            <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <div class="course-icon">
-                            <i class="icon-responsive"></i>
-                        </div>
-                        <div class="course-content">
-                            <h4>Development</h4>
-                            <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="800ms">
-                        <div class="course-icon">
-                            <i class="icon-message"></i>
-                        </div>
-                        <div class="course-content">
-                            <h4>Design</h4>
-                            <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image:url({% static 'img/bg-img/xbg-2.jpg.pagespeed.ic.EyEzBERfTL.webp' %})">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center mx-auto white wow fadeInUp" data-wow-delay="300ms">
-                        <span>our testimonials</span>
-                        <h3>See what our satisfied customers are saying about us</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-12 col-md-6">
-                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
-                        <div class="testimonial-thumb">
-                            <img src="{% static 'img/bg-img/xt1.jpg.pagespeed.ic.jBMC4uh36A.webp' %}" alt="">
-                        </div>
-                        <div class="testimonial-content">
-                            <h5>Great teachers</h5>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec
-                                odio vestibulum est mat tis effic iturut magna.</p>
-                            <h6><span>Maria Smith,</span> Student</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
-                        <div class="testimonial-thumb">
-                            <img src="{% static 'img/bg-img/xt2.jpg.pagespeed.ic.lF5anr2eQx.webp' %}" alt="">
-                        </div>
-                        <div class="testimonial-content">
-                            <h5>Easy and user friendly courses</h5>
-                            <p>Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</p>
-                            <h6><span>Shawn Gaines,</span> Student</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
-                        <div class="testimonial-thumb">
-                            <img src="{% static 'img/bg-img/xt3.jpg.pagespeed.ic.wzG5CG1hYF.webp' %}" alt="">
-                        </div>
-                        <div class="testimonial-content">
-                            <h5>I just love the courses here</h5>
-                            <p>Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio
-                                ves tibul.</p>
-                            <h6><span>Ross Cooper,</span> Student</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="700ms">
-                        <div class="testimonial-thumb">
-                            <img src="{% static 'img/bg-img/xt4.jpg.pagespeed.ic.vVfCxQ137n.webp' %}" alt="">
-                        </div>
-                        <div class="testimonial-content">
-                            <h5>One good academy</h5>
-                            <p>Vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibu lum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.
-                                Etiam nec odio vestibulum est mat tis effic iturut magnaNec odio vestibulum est mattis effic iturut magna.</p>
-                            <h6><span>James Williams,</span> Student</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
-                        <a href="#" class="btn academy-btn">See More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="top-popular-courses-area section-padding-100-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>The Best</span>
-                        <h3>Top Popular Courses</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                {% for i  in Course %}
-                <div class="col-12 col-lg-6">
-                    <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="popular-course-content">
-                            <h5>{{ i.title.title }}</h5>
-                            <span>{{ i.date }}</span>
-                            <div class="course-ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                            <p>{{ i.discription }}</p>
-                            <a href="#" class="btn academy-btn btn-sm">See More</a>
-                        </div>
-                        <div class="popular-course-thumb bg-img" style="background-image:url({{ i.img.url }})"></div>
-                    </div>
-                </div>
-                {% endfor %}
-               
-            </div>
-        </div>
-    </div>
-
-
-    <div class="partner-area section-padding-0-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partners-logo d-flex align-items-center justify-content-between flex-wrap">
-                        <a href="#"><img src="{% static 'img/clients-img/xpartner-1.png.pagespeed.ic.DZMNfVKY91.webp' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'img/clients-img/xpartner-2.png.pagespeed.ic.OA3e7frvuG.webp' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'img/clients-img/xpartner-3.png.pagespeed.ic.5SNzn4kzXl.webp' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'img/clients-img/xpartner-4.png.pagespeed.ic.CWGM6E2voR.webp' %}" alt=""></a>
-                        <a href="#"><img src="{% static 'img/clients-img/xpartner-5.png.pagespeed.ic.bxeXOjglaN.webp' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="call-to-action-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Do you want to enrole at our Academy? Get in touch!</h3>
-                        <a href="#" class="btn academy-btn">See More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <footer class="footer-area">
-        <div class="main-footer-area section-padding-100-0">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <a href="#"><img src="{% static 'img/core-img/xlogo2.png.pagespeed.ic.DSNcneujdE.webp' %}" alt=""></a>
-                            </div>
-                            <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
-                            <div class="footer-social-info">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <h6>Usefull Links</h6>
-                            </div>
-                            <nav>
-                                <ul class="useful-links">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Services &amp; Features</a></li>
-                                    <li><a href="#">Accordions and tabs</a></li>
-                                    <li><a href="#">Menu ideas</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <h6>Gallery</h6>
-                            </div>
-                            <div class="gallery-list d-flex justify-content-between flex-wrap">
-                                <a href="img/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src="{% static 'img/bg-img/xgallery1.jpg.pagespeed.ic.9wZPoCXURF.webp' %}" alt=""></a>
-                                <a href="img/bg-img/gallery2.jpg" class="gallery-img" title="Gallery Image 2"><img src="{% static 'img/bg-img/xgallery2.jpg.pagespeed.ic.KRzkuZ3jnD.webp' %}" alt=""></a>
-                                <a href="img/bg-img/gallery3.jpg" class="gallery-img" title="Gallery Image 3"><img src="{% static 'img/bg-img/xgallery3.jpg.pagespeed.ic.AlK9sZWZIr.webp' %}" alt=""></a>
-                                <a href="img/bg-img/gallery4.jpg" class="gallery-img" title="Gallery Image 4"><img src="{% static 'img/bg-img/xgallery4.jpg.pagespeed.ic.gk3JbDWcgm.webp' %}" alt=""></a>
-                                <a href="img/bg-img/gallery5.jpg" class="gallery-img" title="Gallery Image 5"><img src="{% static 'img/bg-img/xgallery5.jpg.pagespeed.ic.iseNHDC5_k.webp' %}" alt=""></a>
-                                <a href="img/bg-img/gallery6.jpg" class="gallery-img" title="Gallery Image 6"><img src="{% static 'img/bg-img/xgallery6.jpg.pagespeed.ic.R9LFhuMDI3.webp' %}" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="footer-widget mb-100">
-                            <div class="widget-title">
-                                <h6>Contact</h6>
-                            </div>
-                            <div class="single-contact d-flex mb-30">
-                                <i class="icon-placeholder"></i>
-                                <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
-                            </div>
-                            <div class="single-contact d-flex mb-30">
-                                <i class="icon-telephone-1"></i>
-                                <p>Main: 203-808-8613 <br>Office: 203-808-8648</p>
-                            </div>
-                            <div class="single-contact d-flex">
-                                <i class="icon-contract"></i>
-                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80efe6e6e9e3e5c0f9eff5f2e2f5f3e9eee5f3f3aee3efed">[email&#160;protected]</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom-footer-area">
-            <div class="container">
-                <div class="row">
+                <div class="row h-100 align-items-center">
                     <div class="col-12">
-                        <p>
-                            Copyright &copy;
-                            <script data-cfasync="false" src="{% static '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        </p>
+                        <div class="hero-slides-content">
+                            <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
+                            <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University</h2>
+                            <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <div class="single-hero-slide bg-img" style="background-image:url({% static 'img/bg-img/xbg-2.jpg.pagespeed.ic.EyEzBERfTL.webp' %})">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="hero-slides-content">
+                            <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
+                            <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University</h2>
+                            <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
+<div class="top-features-area wow fadeInUp" data-wow-delay="300ms">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="features-content">
+                    <div class="row no-gutters">
 
-    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+                        <div class="col-12 col-md-4">
+                            <div class="single-top-features d-flex align-items-center justify-content-center">
+                                <i class="icon-agenda-1"></i>
+                                <h5>Online Courses</h5>
+                            </div>
+                        </div>
 
-    <script src="{% static 'js/bootstrap/popper.min.js' %}+bootstrap.min.js' %}.pagespeed.jc.IMOwH2Gujn.js' %}"></script>
-    <script>
-        eval(mod_pagespeed_gP$kT8Ob2F);
-    </script>
+                        <div class="col-12 col-md-4">
+                            <div class="single-top-features d-flex align-items-center justify-content-center">
+                                <i class="icon-assistance"></i>
+                                <h5>Amazing Teachers</h5>
+                            </div>
+                        </div>
 
-    <script>
-        eval(mod_pagespeed_nUTqm4G8_4);
-    </script>
+                        <div class="col-12 col-md-4">
+                            <div class="single-top-features d-flex align-items-center justify-content-center">
+                                <i class="icon-telephone-3"></i>
+                                <h5>Great Support</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="{% static 'js/plugins/plugins.js' %}"></script>
 
-    <script src="{% static 'js/active.js' %}"></script>
+<div class="academy-courses-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
 
-    <script async src="{% static 'https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-    <script>
-        window.dataLayer = window.dataLayer || []; 
-        function gtag() {
-            dataLayer.push(arguments);
-        } 
-        gtag('js', new Date());
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="course-icon">
+                        <i class="icon-id-card"></i>
+                    </div>
+                    <div class="course-content">
+                        <h4>Business School</h4>
+                        <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                    </div>
+                </div>
+            </div>
 
-         
-        gtag('config', 'UA-23581568-13');
-    </script>
-    <script defer src="{% static 'https://static.cloudflareinsights.com/beacon.min.js' %}/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"71dbf2937d9421be","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.6.0","si":100}'
-        crossorigin="anonymous"></script>
-</body>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="course-icon">
+                        <i class="icon-worldwide"></i>
+                    </div>
+                    <div class="course-content">
+                        <h4>Marketing</h4>
+                        <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
+                    </div>
+                </div>
+            </div>
 
-</html>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="course-icon">
+                        <i class="icon-map"></i>
+                    </div>
+                    <div class="course-content">
+                        <h4>Photography</h4>
+                        <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="course-icon">
+                        <i class="icon-like"></i>
+                    </div>
+                    <div class="course-content">
+                        <h4>Social Media</h4>
+                        <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="course-icon">
+                        <i class="icon-responsive"></i>
+                    </div>
+                    <div class="course-content">
+                        <h4>Development</h4>
+                        <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="800ms">
+                    <div class="course-icon">
+                        <i class="icon-message"></i>
+                    </div>
+                    <div class="course-content">
+                        <h4>Design</h4>
+                        <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image:url({% static 'img/bg-img/xbg-2.jpg.pagespeed.ic.EyEzBERfTL.webp' %})">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center mx-auto white wow fadeInUp" data-wow-delay="300ms">
+                    <span>our testimonials</span>
+                    <h3>See what our satisfied customers are saying about us</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
+                    <div class="testimonial-thumb">
+                        <img src="{% static 'img/bg-img/xt1.jpg.pagespeed.ic.jBMC4uh36A.webp' %}" alt="">
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>Great teachers</h5>
+                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec
+                            odio vestibulum est mat tis effic iturut magna.</p>
+                        <h6><span>Maria Smith,</span> Student</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
+                    <div class="testimonial-thumb">
+                        <img src="{% static 'img/bg-img/xt2.jpg.pagespeed.ic.lF5anr2eQx.webp' %}" alt="">
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>Easy and user friendly courses</h5>
+                        <p>Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</p>
+                        <h6><span>Shawn Gaines,</span> Student</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
+                    <div class="testimonial-thumb">
+                        <img src="{% static 'img/bg-img/xt3.jpg.pagespeed.ic.wzG5CG1hYF.webp' %}" alt="">
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>I just love the courses here</h5>
+                        <p>Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio
+                            ves tibul.</p>
+                        <h6><span>Ross Cooper,</span> Student</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="700ms">
+                    <div class="testimonial-thumb">
+                        <img src="{% static 'img/bg-img/xt4.jpg.pagespeed.ic.vVfCxQ137n.webp' %}" alt="">
+                    </div>
+                    <div class="testimonial-content">
+                        <h5>One good academy</h5>
+                        <p>Vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibu lum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.
+                            Etiam nec odio vestibulum est mat tis effic iturut magnaNec odio vestibulum est mattis effic iturut magna.</p>
+                        <h6><span>James Williams,</span> Student</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
+                    <a href="#" class="btn academy-btn">See More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="top-popular-courses-area section-padding-100-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                    <span>The Best</span>
+                    <h3>Top Popular Courses</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for i  in Course %}
+            <div class="col-12 col-lg-6">
+                <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="popular-course-content">
+                        <h5>{{ i.title.title }}</h5>
+                        <span>{{ i.date }}</span>
+                        <div class="course-ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <p>{{ i.discription }}</p>
+                        <a href="#" class="btn academy-btn btn-sm">See More</a>
+                    </div>
+                    <div class="popular-course-thumb bg-img" style="background-image:url({{ i.img.url }})"></div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+</div>
+
+
+<div class="partner-area section-padding-0-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="partners-logo d-flex align-items-center justify-content-between flex-wrap">
+                    <a href="#"><img src="{% static 'img/clients-img/xpartner-1.png.pagespeed.ic.DZMNfVKY91.webp' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/clients-img/xpartner-2.png.pagespeed.ic.OA3e7frvuG.webp' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/clients-img/xpartner-3.png.pagespeed.ic.5SNzn4kzXl.webp' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/clients-img/xpartner-4.png.pagespeed.ic.CWGM6E2voR.webp' %}" alt=""></a>
+                    <a href="#"><img src="{% static 'img/clients-img/xpartner-5.png.pagespeed.ic.bxeXOjglaN.webp' %}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="call-to-action-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+                    <h3>Do you want to enrole at our Academy? Get in touch!</h3>
+                    <a href="#" class="btn academy-btn">See More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
